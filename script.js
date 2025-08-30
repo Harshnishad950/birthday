@@ -18,7 +18,7 @@ const musicBtn = document.getElementById("musicBtn");
 // ====== Date setup ======
 const params = new URLSearchParams(window.location.search);
 const urlTarget = params.get('unlock');
-let targetDate = urlTarget || "2025-09-01T10:00"; // default fallback
+let targetDate = urlTarget || "2025-08-30T11:18"; // default fallback
 
 localStorage.setItem(DATE_KEY, new Date(targetDate).toString());
 
