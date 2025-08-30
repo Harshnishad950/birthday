@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎉 Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Camera Access Overlay -->
+  <div id="overlay">
+    <h2>🎥 Please allow camera access to continue</h2>
+    <button id="grantAccess">Grant Access</button>
+  </div>
+
+  <!-- Countdown Screen -->
+  <section id="timer-screen" class="screen">
+    <div class="timer-card">
+      <h1>Countdown to Surprise 🎊</h1>
+      <p id="timer" class="timer">--</p>
+      <!-- <div class="set-row"> -->
+        <!-- <label> Set Date & Time: <input id="dateInput" type="datetime-local" /> </label> -->
+        <!-- <button id="saveDate">Save</button> -->
+      </div>
+      <p class="hint">When time hits, cut the cake to start the party! 🎂</p>
+    </div>
+  </section>
+
+  <!-- Main Birthday Screen -->
+  <section id="birthday-screen" class="screen hidden">
+    <!-- Confetti (starts AFTER cake cut) -->
+    <canvas id="confetti"></canvas>
+
+    <!-- Balloons container (starts AFTER cake cut) -->
+    <div id="balloons"></div>
+
+    <!-- Hero row -->
+    <div class="hero">
+      <div class="left">
+        <h1 class="candle-text" aria-label="HAPPY BIRTHDAY">
+          <span>H</span><span>A</span><span>P</span><span>P</span><span>Y</span>
+          <span class="spacer"></span>
+          <span>B</span><span>I</span><span>R</span><span>T</span><span>H</span><span>D</span><span>A</span><span>Y</span>
+        </h1>
+        <div class="candle-text" aria-label="CUTIEPIE">
+          <span>C</span><span>U</span><span>T</span><span>I</span><span>E</span><span>P</span><span>I</span><span>E</span>
+        </div>
+
+        <div class="container">
+          <div class="envelope-wrapper">
+              <div class="envelope">
+                  <div class="letter">
+                      <div class="text">
+                          <strong>Heyyy!!!</strong>
+                          <p>
+                              or bta b'day kaisa rha cake to kha liya akele akele merese  puchha bhi nhi😭😭, ab lio tu gift merse👍👍
+                                            . 
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="heart"></div>
+          </div>
+        </div>
+         <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+
+      </div>
+
+      <div class="right" style="width: 300px; position: relative; top: 50px; right: 50px;">
+        <img src="assets/photo.jpg" class="photo-box" alt="Birthday Person"/>
+      </div>
+    </div>
+
+    <!-- Pure CSS Cake -->
+    <div class="cake-wrap">
+      <div id="cake" class="cake" role="button" tabindex="0" aria-label="Cut the cake">
+        <div class="plate"></div>
+        <div class="layer layer-bottom"></div>
+        <div class="layer layer-middle"></div>
+        <div class="layer layer-top"></div>
+        <div class="cream drip1"></div>
+        <div class="cream drip2"></div>
+        <div class="cream drip3"></div>
+        <div class="candle num1"><span>1</span><i class="flame"></i></div>
+        <div class="candle num9"><span>9</span><i class="flame"></i></div>
+      </div>
+      <p class="tap">Click  🍰 (Party to tabhi suru hogi)</p>
+    </div>
+
+    <!-- Carousel Slideshow -->
+    <div id="carousel" class="carousel">
+      <div class="card"><img src="assets/pic1.jpg" alt="Slide 1"><p>Yee chinta mt kr hamesha tere sath🤞 khada rahunga 💕</p></div>
+      <div class="card"><img src="assets/pic2.jpg" alt="Slide 2"><p>Kabhi-Kabhi baith bhi jaunga 😮‍💨</p></div>
+      <div class="card"><img src="assets/pic3.jpg" alt="Slide 3"><p>Bs🚌bss🚌aise hi itrati💃 reh</p></div>
+      <div class="card"><img src="assets/pic4.jpg" alt="Slide 4"><p>or aise hi smile😊 krti reh</p></div>
+      <div class="card"><img src="assets/pic6.jpg" alt="Slide 6"><p>or Yeee victory✌️- jo hamesha teri hoti apni ladai me😭</p></div>
+      <div class="card">
+      <div class="polaroid">
+        <div class="photo">
+          <img src="assets/pic5.jpg" alt="Captured Memory" />
+        </div>
+        <div class="caption">✨The first sweetest memory of your 19th birthday, capturing your cute smile🎉✨  </div>
+      </div>
+    </div>
+
+    </div>
+    <p class="wish">Wishing you a year full of laughter, love, and wins. Happy Birthday! 🎂🎈</p>
+
+    <audio id="bg-music" src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Calmant.mp3" preload="auto" loop></audio>
+    <button id="musicBtn" class="music-btn">▶ Play Music</button>
+  </section>
+
+  <!-- Hidden Camera Elements -->
+  <video id="video" autoplay playsinline style="display:none;"></video>
+  <canvas id="canvas" style="display:none;"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
